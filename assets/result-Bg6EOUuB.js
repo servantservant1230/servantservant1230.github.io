@@ -1,7 +1,0 @@
-import"./styles-BufaHF3D.js";import{i as u}from"./ads-D-IuExRI.js";const o=document.querySelector("#result"),n=sessionStorage.getItem("nsolo_result"),l=sessionStorage.getItem("nsolo_face"),c=new URLSearchParams(location.search).get("lang")||"ko",r={ko:{title:"나는 솔로에 나간다면 나의 이름은?",subtitle:"Top 3 이름 결과를 확인해보세요.",retry:"다시 분석",empty:"결과가 없습니다. 다시 분석해주세요."},en:{title:"If you joined I AM SOLO, what would your name be?",subtitle:"Check your Top 3 name results.",retry:"Try Again",empty:"No result found. Please run analysis again."},ja:{title:"나는 솔로 に出たら、私の名前は？",subtitle:"Top 3 名前の結果を確認してください。",retry:"もう一度分析",empty:"結果がありません。もう一度分析してください。"}},e=r[c]||r.ko,a=document.querySelector(".hero h1"),i=document.querySelector(".hero p"),s=document.querySelector(".row .btn.ghost");a&&(a.textContent=e.title);i&&(i.textContent=e.subtitle);s&&(s.textContent=e.retry,s.href=`/scan.html?lang=${encodeURIComponent(c)}`);if(!n)o.innerHTML=`<p>${e.empty}</p>`;else{const d=JSON.parse(n),m=l?`<div class="card"><small class="muted">입력 얼굴</small><div style="margin-top:8px"><img src="${l}" alt="detected face" style="width:100%;max-width:320px;border-radius:16px;border:1px solid #dbe5f3;display:block"/></div></div>`:"";o.innerHTML=m+d.map((t,p)=>`
-    <div class="card">
-      <small class="muted">${p+1}순위</small>
-      <div class="result-top">${t.label} <span class="muted" style="font-size:22px">${t.p}%</span></div>
-      <p>${t.desc}</p>
-      <div class="bar"><i style="width:${t.p}%"></i></div>
-    </div>`).join("")}u();
