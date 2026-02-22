@@ -1,2 +1,1 @@
-# Replace with your Google AdSense publisher line after approval.
-# Example: google.com, pub-1234567890123456, DIRECT, f08c47fec0942fa0
+google.com, pub-1877940216070695, DIRECT, f08c47fec0942fa0
