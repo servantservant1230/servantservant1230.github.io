@@ -1,8 +1,8 @@
 <!doctype html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>scan</title>
-  <script type="module" crossorigin src="./assets/scan-qL8LqE80.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/styles-Cm1FHhnm.js">
+  <script type="module" crossorigin src="./assets/scan-VnZZ_5CZ.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/styles-CCyJblTz.js">
   <link rel="modulepreload" crossorigin href="./assets/types-CWP0aW2C.js">
-  <link rel="stylesheet" crossorigin href="./assets/styles-D71g2CvC.css">
+  <link rel="stylesheet" crossorigin href="./assets/styles-B8KB_2Hr.css">
 </head><body>
 <div class='container'>
   <section class='hero'>
@@ -22,8 +22,17 @@
 
   <section class='card stack'>
     <input id='upload' type='file' accept='image/*' />
+    <div class='quality-row' id='quality-row'>
+      <span class='quality-pill'>정면</span>
+      <span class='quality-pill'>밝은 조명</span>
+      <span class='quality-pill'>단독 얼굴</span>
+    </div>
     <canvas id='preview' width='320' height='320'></canvas>
     <p id='status' class='muted'>사진을 업로드해 주세요.</p>
+    <div id='analyze-progress' class='progress-wrap' aria-live='polite'>
+      <div class='progress-bar'><i id='analyze-progress-bar' style='width:0%'></i></div>
+      <small id='analyze-progress-text' class='muted'>준비중</small>
+    </div>
     <button id='analyze'>분석하기</button>
     <small class='muted'>TIP: 얼굴이 정면에 크게 보일수록 결과가 안정적입니다.</small>
   </section>
